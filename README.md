@@ -1,6 +1,6 @@
 # 🚨 FraudWatch: Real-Time Credit Card Fraud Detection using XGBoost, SMOTE & Flask
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge\&logo=python)
+![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge\&logo=python)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Fraud_Detection-orange?style=for-the-badge)
 ![Flask](https://img.shields.io/badge/Flask-Backend_API-black?style=for-the-badge\&logo=flask)
 ![Machine Learning](https://img.shields.io/badge/Machine-Learning-red?style=for-the-badge)
@@ -24,7 +24,11 @@ The system combines:
 to detect fraudulent transactions with high accuracy and strong fraud recall on highly imbalanced financial datasets.
 
 ---
+🔗WEBSITE
 
+🔗 https://fraudwatch-wb0j.onrender.com
+
+---
 # 🎯 Key Highlights
 
 ✅ Achieved **99.93% Accuracy**
