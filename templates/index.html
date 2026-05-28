@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FraudWatch - Credit Card Fraud Detection</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <h1><i class="fa-solid fa-shield-halved"></i> FraudWatch</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#predict">Predict</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>AI-Powered Credit Card Fraud Detection</h2>
+      <p>Detect fraudulent transactions in real-time with machine learning.</p>
+      <a href="#predict" class="btn">Try Prediction</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About the Project</h2>
+    <p>
+      FraudWatch uses an advanced machine learning model trained on real-world transaction data
+      to identify patterns and detect anomalies that could indicate fraudulent activity.
+    </p>
+  </section>
+  
+    <section id="predict" class="predict">
+      <h2>Fraud Prediction Portal</h2>
+      <p>Enter transaction details below to check if it’s fraudulent or safe.</p>
+      <div class="credit-card-container">
+    <div class="credit-card">
+      <div class="card-front">
+        <div class="chip"></div>
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> FraudWatch</div>
+        <div class="card-number">**** **** **** 1234</div>
+        <div class="card-holder">MANVITH</div>
+      </div>
+      <div class="card-back">
+        <div class="mag-strip"></div>
+        <div class="signature"></div>
+      </div>
+    </div>
+  </div>
+    <form id="fraudForm">
+      <div class="input-group">
+        <label>Transaction Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+      </div>
+
+      <div class="input-group">
+        <label>Transaction Time</label>
+        <input type="number" id="time" placeholder="Enter time (in sec)" required>
+      </div>
+
+      <div class="input-group">
+        <label>V1 - V28 Features</label>
+        <textarea id="features" placeholder="Enter comma-separated feature values (V1,V2,...,V28)" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Predict</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 FraudWatch | Built with ❤️ by Manvith</p>
+  </footer>
+
+  <!-- Load JS via Flask -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
